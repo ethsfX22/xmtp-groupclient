@@ -37,7 +37,6 @@ export default class GroupClient {
 
     async sendMessage(senderAddress, message) {
       if (!this.channelRegistered) {
-        console.log("returning line 40")
         return
       }
 
@@ -45,7 +44,6 @@ export default class GroupClient {
 
       // First check if sender is a chat room participant
       if (!this.channelAddresses.has(senderAddress)) {
-        console.log("returning line 48")
         return
       }
 

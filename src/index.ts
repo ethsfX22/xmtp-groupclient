@@ -61,6 +61,7 @@ app.get("/", async (req: Request, res: Response) => {
 
   // Create the client with your wallet. This will connect to the XMTP development network by default
   const xmtp = await Client.create(wallet);
+  console.log("xmtp group client address is: ", xmtp.address)
 
   // Initialize GroupClient
   const XMTPGroupClient = new GroupClient(xmtp);
